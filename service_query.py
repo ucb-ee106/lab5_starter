@@ -22,7 +22,8 @@ def main():
         request.ik_request.pose_stamped.header.frame_id = "base"
         
         #YOUR CODE HERE
-        #Write code to get the (x, y, z) coordinates of the end effector
+        #Write code to get the (x, y, z) coordinates of the end effector from the user
+        #Hint: the function raw_input() might be useful
         
         #Set the desired orientation for the end effector HERE
         request.ik_request.pose_stamped.pose.position.x = NONE
