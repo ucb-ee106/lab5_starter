@@ -21,10 +21,13 @@ def main():
         request.ik_request.attempts = 20
         request.ik_request.pose_stamped.header.frame_id = "base"
         
+        #YOUR CODE HERE
+        #Write code to get the (x, y, z) coordinates of the end effector
+        
         #Set the desired orientation for the end effector HERE
-        request.ik_request.pose_stamped.pose.position.x = 0.5
-        request.ik_request.pose_stamped.pose.position.y = 0.5
-        request.ik_request.pose_stamped.pose.position.z = 0.0
+        request.ik_request.pose_stamped.pose.position.x = NONE
+        request.ik_request.pose_stamped.pose.position.y = NONE
+        request.ik_request.pose_stamped.pose.position.z = NONE
         
         request.ik_request.pose_stamped.pose.orientation.x = 0.0
         request.ik_request.pose_stamped.pose.orientation.y = 1.0
