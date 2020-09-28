@@ -56,7 +56,7 @@ def main():
     arm_joint_names = joint_names[1:]
     
     #YOUR CODE HERE
-    #Have a user input a specified start position for the first four angles
+    #Have a user input a specified target position for the first four angles
     #raw_input() might be useful to look at here
     target_joint_angles = [0.5, -0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     tolerance = 0.0001
