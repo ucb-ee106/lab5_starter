@@ -40,6 +40,10 @@ def main():
     
     #Set the start state for the trajectory
     goal.request.start_state.joint_state.name = joint_names
+    
+    #YOUR CODE HERE
+    #Have a user input a specified start position for the first four angles
+    #raw_input() might be useful to look at here
     goal.request.start_state.joint_state.position = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     goal.request.start_state.joint_state.velocity = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     
@@ -50,6 +54,10 @@ def main():
     #Note that the goal is specified with a collection of individual
     #joint constraints, rather than a vector of joint angles
     arm_joint_names = joint_names[1:]
+    
+    #YOUR CODE HERE
+    #Have a user input a specified start position for the first four angles
+    #raw_input() might be useful to look at here
     target_joint_angles = [0.5, -0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     tolerance = 0.0001
     consts = []
