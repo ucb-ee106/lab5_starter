@@ -17,7 +17,7 @@ def main():
         #Construct the request
         request = GetPositionIKRequest()
         request.ik_request.group_name = "left_arm"
-        request.ik_request.ik_link_name = "left_gripper"
+        request.ik_request.ik_link_name = "left_hand"
         request.ik_request.attempts = 20
         request.ik_request.pose_stamped.header.frame_id = "base"
         
