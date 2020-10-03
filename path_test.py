@@ -65,6 +65,9 @@ def main():
     Ki = 0.01 * np.array([1, 1, 1, 1, 1, 1, 1]) # Untuned
     Kw = np.array([0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]) # Untuned
 
+    # Initialize the controller for Part 5
+    # controller = Controller( . . . )
+
     #-----------------------------------------------------#
     ## Add any obstacles to the planning scene here
     #-----------------------------------------------------#
