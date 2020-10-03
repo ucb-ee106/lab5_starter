@@ -7,7 +7,6 @@
     <arg name="left_electric_gripper" value="true"/>
   </include>
 
-  <!-- Start the Sawyer pick and place demo -->
-  <node pkg="joint_ctrl" type="ik_pick_and_place_demo.py" name="ik_pick_and_place_demo" />
+  <node pkg="planning" type="ik_pick_and_place_demo.py" name="ik_pick_and_place_demo" />
 
 </launch>
