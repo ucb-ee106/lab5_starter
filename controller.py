@@ -269,14 +269,6 @@ class Controller(object):
         return u
 
 
-if __name__ == '__main__': 
-    pass
-    # Kp = 1.8 * np.array([0.3, 2, 1, 1.5, 2, 2, 3]) # Stolen from 106B Students
-    # Kd = 0.1 * np.array([2, 1, 2, 0.5, 0.5, 0.5, 0.5]) # Stolen from 106B Students
-    # Ki = np.array([1, 1, 1, 1, 1, 1, 1]) # Untuned
-    # Kw = np.array([0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]) # Untuned
-
-
 
     
 
