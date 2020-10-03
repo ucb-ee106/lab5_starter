@@ -160,7 +160,7 @@ import baxter_interface
 
 def load_gazebo_models(table_pose=Pose(position=Point(x=0.75, y=0.0, z=0.0)),
                        table_reference_frame="world",
-                       block_pose=Pose(position=Point(x=0.4225, y=0.1265, z=0.7725)),
+                       block_pose=Pose(position=Point(x=0.4225, y=-0.1265, z=0.7725)),
                        block_reference_frame="world"):
     # Get Models' Path
     model_path = rospkg.RosPack().get_path('planning')+"/models/"
