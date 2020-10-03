@@ -20,7 +20,9 @@ from moveit_msgs.msg import OrientationConstraint
 from geometry_msgs.msg import PoseStamped
 
 from path_planner import PathPlanner
-from controller import Controller
+
+# Uncomment this line for 5 of Lab 5
+# from controller import Controller
 
 def main():
     """
