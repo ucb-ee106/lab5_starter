@@ -216,16 +216,13 @@ def main():
     the loop.
     """
     rospy.init_node("ik_pick_and_place_demo")
-    self._init_state = self._rs.state().enabled
-    print("Enabling robot... ")
-    self._rs.enable()
     # Load Gazebo Models via Spawning Services
     # Note that the models reference is the /world frame
     # and the IK operates with respect to the /base frame
     load_gazebo_models()
-    rospy.spin()
+    # rospy.spin()
     # Remove models from the scene on shutdown
-    rospy.on_shutdown(delete_gazebo_models)
+    # rospy.on_shutdown(delete_gazebo_models)
 
     # limb = 'right'
     # hover_distance = 0.15 # meters
