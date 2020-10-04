@@ -19,20 +19,7 @@ from path_planner import PathPlanner
 # Uncomment this line for part 5 of Lab 5
 # from controller import Controller
 
-# Make sure that you've looked at and understand path_planner.py before starting
-
-planner = PathPlanner("right_arm")
-
-# K values for Part 5
-Kp = 0.1 * np.array([0.3, 2, 1, 1.5, 2, 2, 3]) # Borrowed from 106B Students
-Kd = 0.01 * np.array([2, 1, 2, 0.5, 0.5, 0.5, 0.5]) # Borrowed from 106B Students
-Ki = 0.01 * np.array([1, 1, 1, 1, 1, 1, 1]) # Untuned
-Kw = np.array([0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]) # Untuned
-
-# Initialize the controller for Part 5
-# controller = Controller( . . . )
-
-def move_to_goal(x, y, z, orien_const=[], or_x=0.0, or_y=-1.0, or_z=0.0, or_w=0.0):
+def move_to_goal(x, y, z, orien_const=[], planner, or_x=0.0, or_y=-1.0, or_z=0.0, or_w=0.0):
 	while not rospy.is_shutdown():
 		try:
 		    goal = PoseStamped()
@@ -68,6 +55,19 @@ def main():
     Main Script
     """
 
+    # Make sure that you've looked at and understand path_planner.py before starting
+
+	planner = PathPlanner("right_arm")
+
+	# K values for Part 5
+	Kp = 0.1 * np.array([0.3, 2, 1, 1.5, 2, 2, 3]) # Borrowed from 106B Students
+	Kd = 0.01 * np.array([2, 1, 2, 0.5, 0.5, 0.5, 0.5]) # Borrowed from 106B Students
+	Ki = 0.01 * np.array([1, 1, 1, 1, 1, 1, 1]) # Untuned
+	Kw = np.array([0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]) # Untuned
+
+	# Initialize the controller for Part 5
+	# controller = Controller( . . . )
+
     #-----------------------------------------------------#
     ## Add any obstacles to the planning scene here
     #-----------------------------------------------------#
@@ -86,9 +86,9 @@ def main():
     while not rospy.is_shutdown():
 
     # Set your goal positions here
-    	move_to_goal(0.47, -0.85, 0.07)
-        move_to_goal(0.6, -0.3, 0.0)
-        move_to_goal(0.6, -0.1, 0.1)
+    	move_to_goal(0.47, -0.85, 0.07, planner)
+        move_to_goal(0.6, -0.3, 0.0, planner)
+        move_to_goal(0.6, -0.1, 0.1, planner)
 
         
 
