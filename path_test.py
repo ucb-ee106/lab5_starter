@@ -54,34 +54,34 @@ def main():
     # orien_const.weight = 1.0;
 
     def move_to_goal(x, y, z, orien_const=[], or_x=0.0, or_y=-1.0, or_z=0.0, or_w=0.0):
-	while not rospy.is_shutdown():
-		try:
-		    goal = PoseStamped()
-		    goal.header.frame_id = "base"
+        while not rospy.is_shutdown():
+            try:
+                goal = PoseStamped()
+                goal.header.frame_id = "base"
 
-		    #x, y, and z position
-		    goal.pose.position.x = x
-		    goal.pose.position.y = y
-		    goal.pose.position.z = z
+                #x, y, and z position
+                goal.pose.position.x = x
+                goal.pose.position.y = y
+                goal.pose.position.z = z
 
 		    #Orientation as a quaternion
-		    goal.pose.orientation.x = or_x
-		    goal.pose.orientation.y = or_y
-		    goal.pose.orientation.z = or_z
-		    goal.pose.orientation.w = or_w
+                goal.pose.orientation.x = or_x
+                goal.pose.orientation.y = or_y
+                goal.pose.orientation.z = or_z
+                goal.pose.orientation.w = or_w
 
-		    plan = planner.plan_to_pose(goal, orien_const)
+                plan = planner.plan_to_pose(goal, orien_const)
 
-		    raw_input("Press <Enter> to move the right arm to goal pose: ")
+                raw_input("Press <Enter> to move the right arm to goal pose: ")
 
-		    # Might have to edit this for part 5
-		    if not planner.execute_plan(plan):
-		        raise Exception("Execution failed")
-		except Exception as e:
-		    print e
-		    traceback.print_exc()
-		else:
-			break
+                # Might have to edit this for part 5
+                if not planner.execute_plan(plan):
+                    raise Exception("Execution failed")
+            except Exception as e:
+                print e
+                traceback.print_exc()
+            else:
+                break
 
 
     while not rospy.is_shutdown():
